@@ -4,7 +4,6 @@
 spider_localhome
 Created on: 2018/9/21  14:36
 @author: 卞志伟
-Email:bianzhiwei@iyoujia.com
 """
 
 from tools import Tools
