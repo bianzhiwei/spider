@@ -4,7 +4,6 @@
 online_monitoring
 Created on: 2018/8/13  14:29
 @author: 卞志伟
-Email:bianzhiwei@iyoujia.com
 """
 import pandas as pd
 import time, datetime
