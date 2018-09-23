@@ -4,7 +4,6 @@
 com_tools
 Created on: 2018/8/13  10:25
 @author: 卞志伟
-Email:bianzhiwei@iyoujia.com
 """
 
 import requests
@@ -42,8 +41,8 @@ online_thread_num = 3  # 爬取在线情况的线程数量
 calendar_thread_num = 3  # 爬取在线情况的线程数量
 hawkeye_thread_num = 15  # 爬取在线情况、日历、标签的线程数量
 
-youjia_13_db = create_engine("mysql+pymysql://jingdui:Iudng&6dks@172.16.10.13/youjia_tpp?charset=utf8")
-youjia_db = create_engine("mysql+pymysql://data_sjz:YZr4TsQvJEdajiir@172.16.10.51/youjia?charset=utf8")
+youjia_13_db = create_engine("mysql+pymysql://username:password@ip/dbname?charset=utf8")
+youjia_db = create_engine("mysql+pymysql://username:password@ip/dbname?charset=utf8")
 
 chrom_ua = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 " \
            "(KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36"
@@ -67,8 +66,8 @@ my_room_url_tmp = "http://www.mayi.com/room/%s"
 air_room_url_tmp = "https://www.airbnbchina.cn/rooms/%s"
 
 proxies = {
-    'http': 'http://H4D3E584VRA2842D:7CCD05274100107A@http-dyn.abuyun.com:9020',
-    'https': 'http://H4D3E584VRA2842D:7CCD05274100107A@http-dyn.abuyun.com:9020',
+    'http': None,
+    'https': None,
 }
 
 # 查询蚂蚁、途家、爱彼迎平台上的所有有家房源id及分销平台的房源id
@@ -243,12 +242,12 @@ def pinyin_hive(word):
 
 
 def tpp_db():
-    return records.Database('mysql+pymysql://jingdui:Iudng&6dks@172.16.10.13/youjia_tpp?charset=utf8')
+    return records.Database('mysql+pymysql://username:password@ip/dbname?charset=utf8')
 
 
 def get_connection():
     """获取youjia_tpp连接 connection"""
-    return pymysql.connect(host='172.16.10.13', user='jingdui', passwd='Iudng&6dks', db='youjia_tpp', port=3306,
+    return pymysql.connect(host='ip', user='username', passwd='passwd', db='dbname', port=3306,
                            charset='utf8')
 
 
@@ -428,8 +427,8 @@ def create_proxy_auth_extension(scheme='http', plugin_path=None):
     proxy_host = "http-dyn.abuyun.com"
     proxy_port = "9020"
     # 代理隧道验证信息
-    proxy_username = "H4D3E584VRA2842D"
-    proxy_password = "7CCD05274100107A"
+    proxy_username = "proxy_username"
+    proxy_password = "proxy_password"
     if plugin_path is None:
         plugin_path = sys.path[0] + r'/{}_{}@http-dyn.abuyun.com_9020.zip'.format(proxy_username, proxy_password)
 
