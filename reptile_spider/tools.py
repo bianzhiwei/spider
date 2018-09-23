@@ -4,7 +4,6 @@
 tools
 Created on: 2018/9/21  14:37
 @author: 卞志伟
-Email:bianzhiwei@iyoujia.com
 """
 import config
 import requests
