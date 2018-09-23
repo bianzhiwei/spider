@@ -4,7 +4,6 @@
 calendar_spider
 Created on: 2018/8/21  18:55
 @author: 卞志伟
-Email:bianzhiwei@iyoujia.com
 """
 
 import com_tools
