@@ -4,7 +4,6 @@
 hawk_eye_integration
 Created on: 2018/8/28  10:43
 @author: 卞志伟
-Email:bianzhiwei@iyoujia.com
 """
 
 import datetime
