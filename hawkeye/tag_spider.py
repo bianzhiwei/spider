@@ -4,7 +4,6 @@
 tag_spider
 Created on: 2018/8/20  14:35
 @author: 卞志伟
-Email:bianzhiwei@iyoujia.com
 """
 import com_tools
 from lxml import etree
