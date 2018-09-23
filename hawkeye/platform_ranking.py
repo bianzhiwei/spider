@@ -4,7 +4,6 @@
 platform_ranking
 Created on: 2018/8/14  10:16
 @author: 卞志伟
-Email:bianzhiwei@iyoujia.com
 """
 import com_tools
 import pandas as pd
